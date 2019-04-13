@@ -1,0 +1,90 @@
+@font-face {
+  font-family: 'Trueno Bd';
+  src: url("../fonts/truenobd.woff") format("woff"), url("../fonts/truenobd.woff2") format("woff2"); }
+@font-face {
+  font-family: 'Trueno Lt';
+  src: url("../fonts/truenolt.woff") format("woff"), url("../fonts/truenolt.woff2") format("woff2"); }
+@font-face {
+  font-family: 'Trueno Bl';
+  src: url("../fonts/truenobl.woff") format("woff"), url("../fonts/truenobl.woff2") format("woff2"); }
+* {
+  margin: 0;
+  padding: 0; }
+
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Trueno Bd';
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+.visually-hidden:not(:focus):not(:active) {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden; }
+
+.page-header__top, .page-header__bottom {
+  padding: 0 285px;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Trueno Lt'; }
+.page-header__top {
+  background-color: #472424;
+  font-size: 13px; }
+.page-header__bottom {
+  background-color: #613232; }
+.page-header__list {
+  display: flex; }
+.page-header__item {
+  padding: 14px 20px; }
+.page-header__link {
+  color: #fff; }
+.page-header__logo {
+  display: flex; }
+
+.user-list {
+  display: flex; }
+.user__item {
+  padding: 14px 20px; }
+  .user__item--cart {
+    border-right: 1px solid #593a3a; }
+    .user__item--cart .user__link {
+      display: flex; }
+  .user__item--register {
+    background-color: #ff7373; }
+.user__link {
+  color: #fff; }
+
+.main-nav__list {
+  display: flex;
+  width: 600px;
+  justify-content: space-between; }
+.main-nav__item {
+  padding: 27px 0;
+  padding-bottom: 23px; }
+  .main-nav__item--active {
+    border-bottom: 4px solid #ff7373; }
+    .main-nav__item--active .main-nav__link {
+      color: #ff7373; }
+.main-nav__link {
+  color: #fff; }
