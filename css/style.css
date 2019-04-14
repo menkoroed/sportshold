@@ -5,8 +5,8 @@
   font-family: 'Trueno Lt';
   src: url("../fonts/truenolt.woff") format("woff"), url("../fonts/truenolt.woff2") format("woff2"); }
 @font-face {
-  font-family: 'Trueno Bl';
-  src: url("../fonts/truenobl.woff") format("woff"), url("../fonts/truenobl.woff2") format("woff2"); }
+  font-family: 'Trueno UltBlk';
+  src: url("../fonts/truenoultblk.woff") format("woff"), url("../fonts/truenoultblk.woff2") format("woff2"); }
 * {
   margin: 0;
   padding: 0; }
@@ -15,10 +15,14 @@
   box-sizing: border-box; }
 
 body {
+  min-width: 1680px;
   font-family: 'Trueno Bd';
   font-size: 16px;
   line-height: 26px;
   color: #fff; }
+
+section {
+  padding: 0 285px; }
 
 img {
   max-width: 100%;
@@ -57,6 +61,8 @@ a {
   display: flex; }
 .page-header__item {
   padding: 14px 20px; }
+  .page-header__item--support {
+    padding-left: 0; }
 .page-header__link {
   color: #fff; }
 .page-header__logo {
@@ -88,3 +94,41 @@ a {
       color: #ff7373; }
 .main-nav__link {
   color: #fff; }
+
+.product {
+  position: relative;
+  padding: 130px 285px 137px 855px;
+  background-color: #f0efee; }
+  .product__img {
+    position: absolute;
+    top: -91px;
+    left: -148px; }
+  .product__price, .product__name {
+    line-height: normal;
+    font-weight: normal;
+    color: #623232; }
+  .product__price {
+    font-family: 'Trueno Lt';
+    font-size: 30px; }
+  .product__name {
+    font-family: 'Trueno UltBlk';
+    font-size: 70px; }
+  .product__variants {
+    font-family: 'Trueno UltBlk';
+    font-size: 50px;
+    line-height: normal;
+    color: #ff7373; }
+  .product__text {
+    font-family: 'Trueno Lt';
+    color: #8a8784;
+    width: 400px; }
+  .product__link {
+    display: block;
+    width: 255px;
+    font-family: 'Trueno Bd';
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #ff7373;
+    margin-top: 32px;
+    padding: 13px 0; }

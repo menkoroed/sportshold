@@ -13,9 +13,9 @@ $p: 0 285px;
 }
 
 @font-face {
-				font-family: 'Trueno Bl';
-				src: url('../fonts/truenobl.woff') format('woff'),
-				     url('../fonts/truenobl.woff2') format('woff2');
+				font-family: 'Trueno UltBlk';
+				src: url('../fonts/truenoultblk.woff') format('woff'),
+				     url('../fonts/truenoultblk.woff2') format('woff2');
 }
 
 * {
@@ -28,10 +28,15 @@ $p: 0 285px;
 }
 
 body {
+				min-width: 1680px;
 				font-family: 'Trueno Bd';
 				font-size: 16px;
 				line-height: 26px;
 				color: #fff;
+}
+
+section {
+				padding: $p;
 }
 
 img {
@@ -85,6 +90,9 @@ a {
 
 				&__item {
 								padding: 14px 20px;
+								&--support {
+												padding-left: 0;
+								}
 				}
 
 				&__link {
@@ -140,5 +148,58 @@ a {
 
 				&__link {
 								color: #fff;
+				}
+}
+
+.product {
+				position: relative;
+				padding: 130px 285px 137px 855px;
+				background-color: #f0efee;
+				&__img {
+								position: absolute;
+								top: -91px;
+								left: -148px;
+				}
+
+				&__price,
+				&__name {
+								line-height: normal;
+								font-weight: normal;
+								color: #623232;
+				}
+
+				&__price {
+								font-family: 'Trueno Lt';
+								font-size: 30px;			
+				}
+
+				&__name {
+								font-family: 'Trueno UltBlk';
+								font-size: 70px;
+				}
+
+				&__variants {
+								font-family: 'Trueno UltBlk';
+								font-size: 50px;
+								line-height: normal;
+								color: #ff7373;
+				}
+
+				&__text {
+								font-family: 'Trueno Lt';
+								color: #8a8784;
+								width: 400px;
+				}
+
+				&__link {
+								display: block;
+								width: 255px;
+								font-family: 'Trueno Bd';
+								text-align: center;
+								text-transform: uppercase;
+								color: #fff;
+								background-color: #ff7373;
+								margin-top: 32px;
+								padding: 13px 0;
 				}
 }
