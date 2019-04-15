@@ -1,11 +1,14 @@
 @font-face {
   font-family: 'Trueno Bd';
+  font-display: swap;
   src: url("../fonts/truenobd.woff") format("woff"), url("../fonts/truenobd.woff2") format("woff2"); }
 @font-face {
   font-family: 'Trueno Lt';
+  font-display: swap;
   src: url("../fonts/truenolt.woff") format("woff"), url("../fonts/truenolt.woff2") format("woff2"); }
 @font-face {
   font-family: 'Trueno UltBlk';
+  font-display: swap;
   src: url("../fonts/truenoultblk.woff") format("woff"), url("../fonts/truenoultblk.woff2") format("woff2"); }
 * {
   margin: 0;
@@ -16,7 +19,7 @@
 
 body {
   min-width: 1680px;
-  font-family: 'Trueno Bd';
+  font-family: 'Trueno Bd', sans-serif;
   font-size: 16px;
   line-height: 26px;
   color: #fff; }
@@ -79,7 +82,21 @@ a {
   .user__item--register {
     background-color: #ff7373; }
 .user__link {
+  font-family: 'Trueno Lt';
+  font-size: 13px;
   color: #fff; }
+.user__price {
+  position: relative; }
+  .user__price::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -30px;
+    width: 20px;
+    height: 20px;
+    background-image: url("../img/cart.svg"); }
+.user__count {
+  color: #dcc5b8; }
 
 .main-nav__list {
   display: flex;
@@ -125,10 +142,169 @@ a {
   .product__link {
     display: block;
     width: 255px;
-    font-family: 'Trueno Bd';
     text-align: center;
     text-transform: uppercase;
     color: #fff;
     background-color: #ff7373;
     margin-top: 32px;
     padding: 13px 0; }
+
+.example {
+  padding-top: 50px; }
+  .example__sneakers {
+    display: grid;
+    grid-template-rows: 255px 255px;
+    grid-template-columns: 255px 255px 255px 255px;
+    grid-template-areas: 'one one two two' 'one one three four';
+    grid-gap: 30px; }
+  .example__sneaker {
+    display: grid;
+    grid-template: 1fr / 1fr; }
+    .example__sneaker--one {
+      grid-area: one;
+      background-color: #000;
+      justify-items: center; }
+      .example__sneaker--one .example__img {
+        margin-left: -26px; }
+      .example__sneaker--one .example__text {
+        margin-top: 37px;
+        position: relative; }
+        .example__sneaker--one .example__text-in {
+          color: #4bd8cd; }
+        .example__sneaker--one .example__text::before {
+          content: '';
+          position: absolute;
+          top: -11px;
+          left: -119px;
+          width: 80px;
+          height: 96px;
+          background-image: url("../img/symbol.svg"); }
+      .example__sneaker--one .example__link {
+        color: #000;
+        width: 211px;
+        margin-bottom: 50px;
+        background-color: #4bd8cd; }
+    .example__sneaker--two {
+      grid-area: two;
+      background-color: #ff7373;
+      justify-items: end;
+      position: relative; }
+      .example__sneaker--two .example__img {
+        position: absolute;
+        top: -22px;
+        left: -12px; }
+      .example__sneaker--two .example__text {
+        margin-top: 52px;
+        margin-right: 69px; }
+      .example__sneaker--two .example__link {
+        width: 145px;
+        margin-bottom: 59px;
+        margin-right: 123px;
+        background-color: #623232; }
+    .example__sneaker--three {
+      grid-area: three;
+      background-color: #2d2f2e; }
+      .example__sneaker--three .example__text {
+        align-self: end;
+        margin-bottom: 41px; }
+        .example__sneaker--three .example__text-in {
+          color: #ff7373; }
+    .example__sneaker--four {
+      grid-area: four;
+      align-items: end;
+      justify-items: center;
+      background-color: #cecece; }
+      .example__sneaker--four .example__text {
+        color: #6b7072;
+        width: 190px;
+        margin-top: 27px;
+        align-self: start; }
+        .example__sneaker--four .example__text-in {
+          color: #fff; }
+  .example__img {
+    grid-area: 1 / 1 / -1 / -1; }
+  .example__text {
+    font-family: 'Trueno Lt';
+    font-size: 30px;
+    line-height: normal;
+    text-align: center;
+    grid-area: 1 / 1 / -1 / -1;
+    width: 255px; }
+    .example__text-in {
+      font-family: 'Trueno Bd';
+      text-transform: uppercase; }
+  .example__link {
+    padding: 13px 0;
+    text-align: center;
+    text-transform: uppercase;
+    grid-area: 1 / 1 / -1 / -1;
+    align-self: end; }
+
+.shop__top--active .shop__link {
+  font-family: 'Trueno Bd';
+  color: #623232; }
+.shop__tops {
+  display: flex;
+  justify-content: space-between;
+  width: 452px;
+  margin: 11px auto;
+  margin-top: 91px; }
+.shop__link {
+  font-family: 'Trueno Lt';
+  font-size: 30px;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #bdb9b5; }
+.shop__list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+.shop__item {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 255px;
+  border: 1px solid #e0dfde;
+  margin-top: 30px;
+  padding: 27px 26px;
+  padding-bottom: 30px; }
+  .shop__item--diskount .shop__price {
+    color: #ff7373; }
+  .shop__item--diskount .shop__img {
+    margin-top: -55px; }
+.shop__price {
+  font-family: 'Trueno Lt';
+  color: #8a8784;
+  font-size: 24px;
+  font-weight: 400;
+  width: 82px;
+  align-self: center; }
+.shop__old {
+  color: #8a8784;
+  font-size: 16px;
+  text-decoration: line-through; }
+.shop__discount {
+  margin-top: -4px;
+  margin-right: -27px;
+  padding: 3px 10px;
+  background-color: #ff7373;
+  align-self: start; }
+.shop__img {
+  height: 200px;
+  z-index: -1;
+  margin-top: -32px; }
+.shop__male, .shop__name {
+  color: #8a8784;
+  font-weight: 400;
+  font-size: 16px; }
+.shop__name, .shop__id {
+  font-family: 'Trueno Lt'; }
+.shop__male {
+  text-transform: uppercase;
+  width: 100%; }
+.shop__name {
+  text-transform: capitalize;
+  width: 190px; }
+.shop__id {
+  font-size: 13px;
+  color: #bdb9b5; }

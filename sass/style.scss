@@ -2,18 +2,21 @@ $p: 0 285px;
 
 @font-face {
 				font-family: 'Trueno Bd';
+				font-display: swap;
 				src: url('../fonts/truenobd.woff') format('woff'),
 				     url('../fonts/truenobd.woff2') format('woff2');
 }
 
 @font-face {
 				font-family: 'Trueno Lt';
+				font-display: swap;
 				src: url('../fonts/truenolt.woff') format('woff'),
 				     url('../fonts/truenolt.woff2') format('woff2');
 }
 
 @font-face {
 				font-family: 'Trueno UltBlk';
+				font-display: swap;
 				src: url('../fonts/truenoultblk.woff') format('woff'),
 				     url('../fonts/truenoultblk.woff2') format('woff2');
 }
@@ -29,7 +32,7 @@ $p: 0 285px;
 
 body {
 				min-width: 1680px;
-				font-family: 'Trueno Bd';
+				font-family: 'Trueno Bd', sans-serif;
 				font-size: 16px;
 				line-height: 26px;
 				color: #fff;
@@ -124,7 +127,27 @@ a {
 				}
 
 				&__link {
+								font-family: 'Trueno Lt';
+								font-size: 13px;
 								color: #fff;
+				}
+
+				&__price {
+								position: relative;
+								&::before {
+												content: '';
+												position: absolute;
+												top: -3px;
+												left: -30px;
+												width: 20px;
+												height: 20px;
+												background-image: url('../img/cart.svg');
+								}
+				}
+
+
+				&__count {
+								color: #dcc5b8;
 				}
 }
 
@@ -194,12 +217,247 @@ a {
 				&__link {
 								display: block;
 								width: 255px;
-								font-family: 'Trueno Bd';
 								text-align: center;
 								text-transform: uppercase;
 								color: #fff;
 								background-color: #ff7373;
 								margin-top: 32px;
 								padding: 13px 0;
+				}
+}
+
+.example {
+				padding-top: 50px;
+				&__sneakers {
+								display: grid;
+								grid-template-rows: 255px 255px;
+								grid-template-columns: 255px 255px 255px 255px;
+								grid-template-areas: 
+												'one one two two'
+												'one one three four';
+								grid-gap: 30px;
+				}
+
+				&__sneaker {
+								display: grid;
+								grid-template: 1fr / 1fr;
+								&--one {
+												grid-area: one;
+												background-color: #000;
+												justify-items: center;
+												.example__img {
+																margin-left: -26px;
+												}
+
+												.example__text {
+																margin-top: 37px;
+																position: relative;
+																&-in {
+																				color: #4bd8cd;
+																}
+
+																&::before {
+																				content: '';
+																				position: absolute;
+																				top: -11px;
+																				left: -119px;
+																				width: 80px;
+																				height: 96px;
+																				background-image: url('../img/symbol.svg');
+																}
+												}
+
+												.example__link {
+																color: #000;
+																width: 211px;
+																margin-bottom: 50px;
+																background-color: #4bd8cd;
+												}
+								}
+
+								&--two {
+												grid-area: two;
+												background-color: #ff7373;
+												justify-items: end;
+												position: relative;
+												.example__img {
+																position: absolute;
+																top: -22px;
+																left: -12px;
+												}
+
+												.example__text {
+																margin-top: 52px;
+																margin-right: 69px;
+												}
+
+												.example__link {
+																width: 145px;
+																margin-bottom: 59px;
+																margin-right: 123px;
+																background-color: #623232;
+												}
+								}
+
+								&--three {
+												grid-area: three;
+												background-color: #2d2f2e;
+
+												.example__text {
+																align-self: end;
+																margin-bottom: 41px;
+																&-in {
+																				color: #ff7373;
+																}
+												}
+								}
+
+								&--four {
+												grid-area: four;
+												align-items: end;
+												justify-items: center;
+												background-color: #cecece;
+												.example__text {
+																color: #6b7072;
+																width: 190px;
+																margin-top: 27px;
+																align-self: start;
+																&-in {
+																				color: #fff;
+																}
+												}
+								}
+				}
+
+				&__img {
+								grid-area: 1 / 1 / -1 / -1;
+				}
+
+				&__text {
+								font-family: 'Trueno Lt';
+								font-size: 30px;
+								line-height: normal;
+								text-align: center;
+								grid-area: 1 / 1 / -1 / -1;
+								width: 255px;
+								&-in {
+												font-family: 'Trueno Bd';
+												text-transform: uppercase;
+								}
+				}
+
+				&__link {
+								padding: 13px 0;
+								text-align: center;
+								text-transform: uppercase;
+								grid-area: 1 / 1 / -1 / -1;
+								align-self: end;
+				}
+}
+
+.shop {
+				&__top {
+								&--active .shop__link{
+												font-family: 'Trueno Bd';
+												color: #623232;
+								}
+
+								&s {
+												display: flex;
+												justify-content: space-between;
+												width: 452px;
+												margin: 11px auto;
+												margin-top: 91px;
+								}
+				}
+
+				&__link {
+								font-family: 'Trueno Lt';
+								font-size: 30px;
+								line-height: normal;
+								text-transform: uppercase;
+								color: #bdb9b5;
+				}
+
+				&__list {
+								display: flex;
+								justify-content: space-between;
+								flex-wrap: wrap;
+				}
+
+				&__item {
+								display: flex;
+								justify-content: space-between;
+								flex-wrap: wrap;
+								width: 255px;
+								border: 1px solid #e0dfde;
+								margin-top: 30px;
+								padding: 27px 26px;
+								padding-bottom: 30px;
+								&--diskount {
+												.shop__price {
+																color: #ff7373;
+												}
+
+												.shop__img {
+																margin-top: -55px;
+												}
+								}
+				}
+
+				&__price {
+								font-family: 'Trueno Lt';
+								color: #8a8784;
+								font-size: 24px;
+								font-weight: 400;
+								width: 82px;
+								align-self: center;
+				}
+
+				&__old {
+								color: #8a8784;
+								font-size: 16px;
+								text-decoration: line-through;
+				}
+
+				&__discount {
+								margin-top: -4px;
+								margin-right: -27px;
+								padding: 3px 10px;
+								background-color: #ff7373;
+								align-self: start;
+				}
+
+				&__img {
+								height: 200px;
+								z-index: -1;
+								margin-top: -32px;
+				}
+
+				&__male,
+				&__name{
+								color: #8a8784;
+								font-weight: 400;
+								font-size: 16px;
+				}
+
+				&__name,
+				&__id {
+								font-family: 'Trueno Lt';
+				}
+
+				&__male {
+								text-transform: uppercase;
+								width: 100%;
+				}
+
+				&__name {
+								text-transform: capitalize;
+								width: 190px;
+				}
+
+				&__id {
+								font-size: 13px;
+								color: #bdb9b5;
 				}
 }
