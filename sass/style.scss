@@ -105,6 +105,7 @@ a {
 
 				&__logo {
 								display: flex;
+								z-index: 1;
 				}
 }
 
@@ -160,8 +161,9 @@ a {
 				}
 
 				&__item {
-								padding: 27px 0;
+								padding: 27px 9px;
 								padding-bottom: 23px;
+								z-index: 1;
 								&--active {
 												border-bottom: 4px solid #ff7373;
 												.main-nav__link {
@@ -641,5 +643,199 @@ a {
 								background-color: #623232;
 								margin-top: 14px;
 								padding: 12px 30px;
+				}
+}
+
+.page-footer {
+				font-family: 'Trueno Lt';
+				padding: $p;
+				background-color: #623232;
+				&__top {
+								padding-top: 50px;
+								padding-bottom: 42px;
+								border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+				}
+
+				&__middle {
+								display: flex;
+								justify-content: space-between;
+								padding-top: 104px;
+								padding-bottom: 100px;
+								border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+				}
+
+				&__bottom {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								padding-top: 42px;
+								padding-bottom: 50px;
+				}
+}
+
+.top {
+				&__list {
+								display: flex;
+								justify-content: space-between;
+				}
+
+				&__item {
+								text-align: center;
+								text-transform: capitalize;
+								padding-top: 70px;
+								position: relative;
+								&--shiping,
+								&--gift, &--delivery { 
+												text-transform: none;
+								}
+
+								&::before {
+												content: '';
+												position: absolute;
+												top: 0;
+												left: 50%;
+												width: 40px;
+												height: 40px;
+												background-repeat: no-repeat;
+												transform: translateX(-50%);
+								}
+
+								&--shiping::before {
+												background-image: url('../img/shiping.svg');
+								}
+
+								&--money::before {
+												background-image: url('../img/money.svg');
+								}
+
+								&--support::before {
+												background-image: url('../img/support.svg');
+								}
+
+								&--price::before {
+												background-image: url('../img/price.svg');
+								}
+
+								&--gift::before {
+												background-image: url('../img/gift.svg');
+								}
+
+								&--delivery::before {
+												background-image: url('../img/delivery.svg');
+												height: 28px;
+												top: 6px;
+								}
+				}
+}
+
+.middle {
+				&__info {
+								margin-bottom: 24px;
+								padding-left: 75px;
+								position: relative;
+								&::before,
+								&::after {
+												content: '';
+												position: absolute;
+												top: 0;
+												left: 0;
+												background-repeat: no-repeat;
+								}
+
+								&::before {
+												width: 20px;
+												height: 20px;
+												top: 50%;
+												left: 18px;
+												z-index: 1;
+												transform: translateY(-50%);
+								}
+
+								&::after {
+												width: 55px;
+												height: 55px;
+												background-color: #ff7373;
+								}
+
+								&--call::before {
+												background-image: url('../img/call.svg');
+								}
+
+								&--email::before {
+												background-image: url('../img/email.svg');
+								}
+
+								&--address {
+												margin: 0;
+												&::before {
+																background-image: url('../img/address.svg');
+												}
+								}
+				}
+
+				&__name,
+				&__head {
+								font-family: 'Trueno Bd';
+								font-weight: normal;
+								text-transform: uppercase;
+								color: #ff7373;
+				}
+
+				&__list {
+								display: flex;
+								gap: 85.5px;
+				}
+
+				&__head {
+								margin-bottom: 14px;
+				}
+}
+
+.bottom {
+				&__list {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+								width: 177px;
+				}
+
+				&__link {
+								display: block;
+								font-size: 0;
+								width: 27px;
+								height: 27px;
+								position: relative;
+								&::before {
+												content: '';
+												position: absolute;
+												width: inherit;
+												height: inherit;
+												background-repeat: no-repeat;
+								}
+
+								&--twitter {
+												height: 22px;
+												&::before {
+																background-image: url('../img/twitter.svg');
+												}
+								}
+
+								&--facebook {
+												width: 13px;
+												&::before {
+																background-image: url('../img/facebook.svg');
+												}
+								}
+
+								&--pininterest::before {
+												background-image: url('../img/pininterest.svg');
+								}
+
+								&--youtube {
+												height: 19px;
+												&::before {
+																background-image: url('../img/youtube.svg');
+												}
+								}
 				}
 }

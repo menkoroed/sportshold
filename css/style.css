@@ -70,7 +70,8 @@ a {
 .page-header__link {
   color: #fff; }
 .page-header__logo {
-  display: flex; }
+  display: flex;
+  z-index: 1; }
 
 .user-list {
   display: flex; }
@@ -104,8 +105,9 @@ a {
   width: 600px;
   justify-content: space-between; }
 .main-nav__item {
-  padding: 27px 0;
-  padding-bottom: 23px; }
+  padding: 27px 9px;
+  padding-bottom: 23px;
+  z-index: 1; }
   .main-nav__item--active {
     border-bottom: 4px solid #ff7373; }
     .main-nav__item--active .main-nav__link {
@@ -445,3 +447,130 @@ a {
     background-color: #623232;
     margin-top: 14px;
     padding: 12px 30px; }
+
+.page-footer {
+  font-family: 'Trueno Lt';
+  padding: 0 285px;
+  background-color: #623232; }
+  .page-footer__top {
+    padding-top: 50px;
+    padding-bottom: 42px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+  .page-footer__middle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 104px;
+    padding-bottom: 100px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+  .page-footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 42px;
+    padding-bottom: 50px; }
+
+.top__list {
+  display: flex;
+  justify-content: space-between; }
+.top__item {
+  text-align: center;
+  text-transform: capitalize;
+  padding-top: 70px;
+  position: relative; }
+  .top__item--shiping, .top__item--gift, .top__item--delivery {
+    text-transform: none; }
+  .top__item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    background-repeat: no-repeat;
+    transform: translateX(-50%); }
+  .top__item--shiping::before {
+    background-image: url("../img/shiping.svg"); }
+  .top__item--money::before {
+    background-image: url("../img/money.svg"); }
+  .top__item--support::before {
+    background-image: url("../img/support.svg"); }
+  .top__item--price::before {
+    background-image: url("../img/price.svg"); }
+  .top__item--gift::before {
+    background-image: url("../img/gift.svg"); }
+  .top__item--delivery::before {
+    background-image: url("../img/delivery.svg");
+    height: 28px;
+    top: 6px; }
+
+.middle__info {
+  margin-bottom: 24px;
+  padding-left: 75px;
+  position: relative; }
+  .middle__info::before, .middle__info::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat; }
+  .middle__info::before {
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    left: 18px;
+    z-index: 1;
+    transform: translateY(-50%); }
+  .middle__info::after {
+    width: 55px;
+    height: 55px;
+    background-color: #ff7373; }
+  .middle__info--call::before {
+    background-image: url("../img/call.svg"); }
+  .middle__info--email::before {
+    background-image: url("../img/email.svg"); }
+  .middle__info--address {
+    margin: 0; }
+    .middle__info--address::before {
+      background-image: url("../img/address.svg"); }
+.middle__name, .middle__head {
+  font-family: 'Trueno Bd';
+  font-weight: normal;
+  text-transform: uppercase;
+  color: #ff7373; }
+.middle__list {
+  display: flex;
+  gap: 85.5px; }
+.middle__head {
+  margin-bottom: 14px; }
+
+.bottom__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 177px; }
+.bottom__link {
+  display: block;
+  font-size: 0;
+  width: 27px;
+  height: 27px;
+  position: relative; }
+  .bottom__link::before {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-repeat: no-repeat; }
+  .bottom__link--twitter {
+    height: 22px; }
+    .bottom__link--twitter::before {
+      background-image: url("../img/twitter.svg"); }
+  .bottom__link--facebook {
+    width: 13px; }
+    .bottom__link--facebook::before {
+      background-image: url("../img/facebook.svg"); }
+  .bottom__link--pininterest::before {
+    background-image: url("../img/pininterest.svg"); }
+  .bottom__link--youtube {
+    height: 19px; }
+    .bottom__link--youtube::before {
+      background-image: url("../img/youtube.svg"); }
